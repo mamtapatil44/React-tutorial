@@ -6,7 +6,8 @@ const isAuthenticate = ()=>{
 }
 
 const ProtectedRoute = ()=>{
-    return isAuthenticate() ? <Outlet/> : Navigate('/login')
+    console.log("isAuthenticate() ",isAuthenticate())
+    return isAuthenticate() ? <Outlet/> :  <Navigate to="/login" />
 
 }
 
