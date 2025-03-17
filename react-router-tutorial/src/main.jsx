@@ -9,6 +9,8 @@ import Profile from "./components/Profile.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Login from "./components/Login.jsx";
 import ProtectedRoute from "./components/ProtectedGuard.jsx";
+import RoleGuard from "./components/RoleGuard.jsx";
+import Admin from "./components/Admin.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -17,6 +19,16 @@ const routes = createBrowserRouter([
     errorElement: <div>Page Not found</div>,
   },
   { path: "login", element: <Login /> },
+  {
+    path: "admin",
+    element: <RoleGuard allowedRoles={["admin"]} />,
+    children: [
+      {
+        path: "",
+        element: <Admin></Admin>,
+      },
+    ],
+  },
 
   {
     path: "/profiles",
