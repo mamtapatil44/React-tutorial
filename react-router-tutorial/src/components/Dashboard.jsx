@@ -3,7 +3,9 @@ import Logout from './Logout'
 
 const Dashboard = () => {
   return (
-    <div><Logout/></div>
+    <div>
+      <Logout/>
+      </div>
   )
 }
 
