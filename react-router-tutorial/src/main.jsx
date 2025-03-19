@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Admin></Admin>,
+        element: <Admin> </Admin>,
       },
     ],
   },
