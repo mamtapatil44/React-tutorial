@@ -11,12 +11,17 @@ import Login from "./components/Login.jsx";
 import ProtectedRoute from "./components/ProtectedGuard.jsx";
 import RoleGuard from "./components/RoleGuard.jsx";
 import Admin from "./components/Admin.jsx";
+import Multilpe from "./components/Multilpe.jsx";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     errorElement: <div>Page Not found</div>,
+  },
+  {
+    path: "/multiple",
+    element: <Multilpe />,
   },
   { path: "login", element: <Login /> },
   {
