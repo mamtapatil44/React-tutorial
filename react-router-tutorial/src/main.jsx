@@ -12,6 +12,7 @@ import ProtectedRoute from "./components/ProtectedGuard.jsx";
 import RoleGuard from "./components/RoleGuard.jsx";
 import Admin from "./components/Admin.jsx";
 import Multilpe from "./components/Multilpe.jsx";
+import StyleComp from "./components/StyleComp.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
   {
     path: "/multiple",
     element: <Multilpe />,
+  },
+  {
+    path: "/style",
+    element: <StyleComp />,
   },
   { path: "login", element: <Login /> },
   {
