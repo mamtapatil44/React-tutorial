@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
     element: <Multilpe />,
   },
   {
-    path: "/style",
+    path: " /style",
     element: <StyleComp />,
   },
   { path: "login", element: <Login /> },
