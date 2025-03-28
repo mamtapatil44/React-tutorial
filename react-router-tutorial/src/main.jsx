@@ -22,7 +22,7 @@ const routes = createBrowserRouter([
   },
   {
     path: "/multiple",
-    element: <Multilpe />,
+        element: <Multilpe />,
   },
   {
     path: " /style",
