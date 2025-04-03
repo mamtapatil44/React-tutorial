@@ -41,6 +41,8 @@ const HookC = () => {
         onChange={(e) => handleData(e.target.value)}
       />
 
+      
+
       <input
         className=" w-2xl bg-gray-400 border p-2 mt-4"
         ref={inputValue}
