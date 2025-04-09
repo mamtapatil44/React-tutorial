@@ -36,12 +36,12 @@ const HookC = () => {
   return (
     <div>
       <input
-        className=" w-2xl bg-gray-400 border p-2"
+           className=" w-2xl bg-gray-400 border p-2"
         value={data}
         onChange={(e) => handleData(e.target.value)}
       />
 
-      
+
 
       <input
         className=" w-2xl bg-gray-400 border p-2 mt-4"
