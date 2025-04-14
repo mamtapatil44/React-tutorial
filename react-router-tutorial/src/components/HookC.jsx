@@ -13,7 +13,7 @@ function reducer(state, action) {
   }
 }
 
-const HookC = () => {
+const HookC =   () => {
   const [data, setData] = useState("");
   const inputValue = useRef("new");
   const [state, dispatch] = useReducer(reducer, initialState);
