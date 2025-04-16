@@ -13,6 +13,9 @@ import RoleGuard from "./components/RoleGuard.jsx";
 import Admin from "./components/Admin.jsx";
 import Multilpe from "./components/Multilpe.jsx";
 import StyleComp from "./components/StyleComp.jsx";
+import { Provider } from "react-redux";
+import { store } from "./store/app.store.jsx";
+import StoreComp from "./components/StoreComp.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -22,13 +25,14 @@ const routes = createBrowserRouter([
   },
   {
     path: "/multiple",
-        element: <Multilpe />,
+    element: <Multilpe />,
   },
   {
     path: " /style",
     element: <StyleComp />,
   },
   { path: "login", element: <Login /> },
+  { path: "storecomp", element: <StoreComp /> },
   {
     path: "admin",
     element: <RoleGuard allowedRoles={["admin"]} />,
@@ -45,7 +49,6 @@ const routes = createBrowserRouter([
     element: <Profiles />,
     children: [
       {
-        
         path: "/profiles/:profileId",
         element: <Profile />,
       },
@@ -65,7 +68,9 @@ const routes = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <RouterProvider router={routes} /> */}
-    <App/>
+    <Provider store={store}>
+      <RouterProvider router={routes} />
+    </Provider>
+    {/* <App/> */}
   </StrictMode>
 );
