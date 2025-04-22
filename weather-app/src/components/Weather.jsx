@@ -47,7 +47,7 @@ const Weather = () => {
             <h2 className="text-xl font-semibold text-blue-800">
               {weather.weatherData?.resolvedAddress}
             </h2>
-            <p className="text-gray-700 mt-2">{today.datetime}</p>
+            <p className="text-gray-700 mt-2 font-bold">{today.datetime}</p>
             <p className="text-gray-600 capitalize mt-1">
               🌥️ {today.conditions}
             </p>
